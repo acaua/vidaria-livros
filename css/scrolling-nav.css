@@ -40,21 +40,35 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
-.about-section {
+.servicos-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
 }
 
-.services-section {
+.video-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+
+.sobre-section {
+    height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+}
+
+.imprensa-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
 }
 
-.contact-section {
+.contato-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
