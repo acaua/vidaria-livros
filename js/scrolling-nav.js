@@ -17,3 +17,11 @@ $(function() {
         event.preventDefault();
     });
 });
+
+// Update the contact form action with the obfuscated email address
+$(function() {
+  var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
+  var base_url = '//formspree.io/';
+  var action = base_url + atob(base64_email);
+  $('#contact-form').attr('action', action);
+});
