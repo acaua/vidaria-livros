@@ -57,7 +57,7 @@
                         <a class="page-scroll" href="#servicos">Conte sua história</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#sobre">Sobre mim</a>
+                        <a class="page-scroll" href="#sobre">Minha história</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#imprensa">Imprensa</a>
@@ -75,22 +75,24 @@
     <!-- Intro Section -->
     <section id="intro" class="intro-section">
       <div class="container">
-        <div class="intro-text">
-          <div class="intro-title">Vidaria Livros</div>
-          <div class="intro-subtitle">
-            Toda vida vivida ou história construída<br>
-            merece ser lida e dividida<br>
-            com outras vidas
+        <div class="row">
+          <div class="col-md-12">
+            <div class="intro-title">Vidaria Livros</div>
+            <div class="intro-subtitle">
+              Toda vida vivida ou história construída<br>
+              merece ser lida e dividida<br>
+              com outras vidas
+            </div>
+            <div class="intro-services">
+              Biografias - histórias de vida - livros para empresas - consultoria - workshops
+            </div>
+            <p>
+              Olá, sou Gabriela Gasparin e criei a Vidaria Livros para fazer o que mais gosto: contar histórias.
+              Escrevo biografias e livros com a trajetória de qualquer pessoa, empresa ou entidade.
+              Também auxilio quem sonha em escrever um livro com as próprias mãos, mas não sabe por onde começar.
+            </p>
+            <a href="#servicos" class="page-scroll btn btn-default">Conte sua história</a>
           </div>
-          <div class="intro-services">
-            Biografias - histórias de vida - livros para empresas - consultoria - workshops
-          </div>
-          <p>
-            Olá, sou Gabriela Gasparin e criei a Vidaria Livros para fazer o que mais gosto: contar histórias.
-            Escrevo biografias e livros com a trajetória de qualquer pessoa, empresa ou entidade.
-            Também auxilio quem sonha em escrever um livro com as próprias mãos, mas não sabe por onde começar.
-          </p>
-          <a href="#servicos" class="page-scroll btn btn-default">Conte sua história</a>
         </div>
       </div>
     </section>
@@ -202,16 +204,16 @@
     <section id="contato" class="contato-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 text-left">
+          <div id="form-block" class="col-md-6 col-md-offset-3 text-left">
             <h1>Contato</h1>
-            <form id="contact-form" method="POST" role="form" action="hidden">
+            <form id="contact-form" method="POST" role="form">
               <div class="form-group">
                 <label class="sr-only" for="name">Nome</label>
-                <input type="text" id="name" class="form-control" name="name" placeholder="Seu nome">
+                <input type="text" id="name" class="form-control" name="name" placeholder="Seu nome" required>
               </div>
               <div class="form-group">
                 <label class="sr-only" for="email">Endereço de email</label>
-                <input type="email" id="email" class="form-control" name="_replyto" placeholder="Seu email">
+                <input type="email" id="email" class="form-control" name="_replyto" placeholder="Seu email" required>
               </div>
               <div class="row">
                 <div class="form-group col-sm-8">
@@ -225,18 +227,24 @@
               </div>
               <div class="form-group">
                 <label class="sr-only" for="message">Mensagem</label>
-                <textarea name="message" id="message" class="form-control" placeholder="Sua mensagem" rows=5></textarea>
+                <textarea name="message" id="message" class="form-control" placeholder="Sua mensagem" rows=5 required></textarea>
               </div>
               <input type="hidden" name="_subject" value="Vidaria Livros - contato">
-              <input type="hidden" name="_next" value="/">
               <input type="text" name="_gotcha" style="display:none">
-              <button type="submit" class="btn btn-default">Enviar</button>
+              <button id="form-submit-button" class="btn btn-default">Enviar</button>
             </form>
             <script>
               //var contactform =  document.getElementById('contactform');
               //contactform.setAttribute('action', '//formspree.io/' + 'your' + '@' + 'email' + '.' + 'com');
             </script>
           </div>
+          <div id="form-success" class="col-md-6 col-md-offset-3 text-left" style="display:none">
+            <h1>Obrigado pelo contato</h1>
+          </div>
+          <div id="form-error" class="col-md-6 col-md-offset-3 text-left" style="display:none">
+            <h1>Ocorreu um erro, tente novamente</h1>
+          </div>
+
         </div>
       </div>
     </section>

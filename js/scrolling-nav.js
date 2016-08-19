@@ -7,21 +7,42 @@ $(window).scroll(function() {
     }
 });
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
+$(document).ready(function() {
+  //jQuery for page scrolling feature - requires jQuery Easing plugin
+  $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+  });
 
-// Update the contact form action with the obfuscated email address
-$(function() {
-  var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
-  var base_url = '//formspree.io/';
-  var action = base_url + atob(base64_email);
-  $('#contact-form').attr('action', action);
+
+  $("#contact-form").on("submit", function(e) {
+    e.preventDefault();
+
+    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
+    var base_url = '//formspree.io/';
+    var url = base_url + atob(base64_email);
+    var message = $("#contact-form").serialize();
+
+    $.ajax({
+        url: url,
+        method: "POST",
+        data: message,
+        dataType: "json",
+        beforeSend: function() {
+          $("#form-submit-button").prop("disabled",true).html("Enviando...");
+        },
+        success:function(data) {
+            $("#form-block").hide();
+            $("#form-error").hide();
+            $("#form-success").show();
+        },
+        error: function(err) {
+          $("#form-submit-button").prop("disabled",false).html("Enviar");
+          $("#form-error").show();
+        }
+    });
+  });
 });
