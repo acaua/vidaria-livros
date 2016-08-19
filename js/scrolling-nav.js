@@ -17,15 +17,13 @@ $(document).ready(function() {
       event.preventDefault();
   });
 
-
+  // Assigning Ajax post of contact form instead of normal submit behavior
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-
     var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
     var base_url = '//formspree.io/';
     var url = base_url + atob(base64_email);
     var message = $("#contact-form").serialize();
-
     $.ajax({
         url: url,
         method: "POST",
@@ -44,5 +42,11 @@ $(document).ready(function() {
           $("#form-error").show();
         }
     });
+  });
+
+  // Init fluidvids to make youtube embeded video responsive
+  fluidvids.init({
+    selector: ['iframe'],
+    players: ['www.youtube.com']
   });
 });
