@@ -8,6 +8,11 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function() {
+  // Closes the Responsive Menu on Menu Item Click
+  $('.navbar-collapse ul li a').click(function(){
+          $('.navbar-toggle:visible').click();
+  });
+
   //jQuery for page scrolling feature - requires jQuery Easing plugin
   $('a.page-scroll').bind('click', function(event) {
       var $anchor = $(this);
