@@ -30,7 +30,7 @@ html {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
-    .top-nav-collapse {
+    .navbar.affix {
         padding: 0;
     }
 }
