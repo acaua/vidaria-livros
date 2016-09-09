@@ -2,7 +2,7 @@ $(document).ready(function() {
   // Initialize affix and add an offset to add affix class on scroll
   $('#main-nav').affix({
     offset: {
-      top: 500
+      top: 300
     }
   });
 
@@ -47,9 +47,10 @@ $(document).ready(function() {
     });
   });
 
-  // Init fluidvids to make youtube embeded video responsive
-  fluidvids.init({
-    selector: ['iframe'],
-    players: ['www.youtube.com']
+
+  $(".modal-servico").on('hide.bs.modal', function(){
+    var url = $(this).find("iframe").attr('src');
+    $(this).find("iframe").attr('src', '');
+    $(this).find("iframe").attr('src', url);
   });
 });

@@ -22,42 +22,58 @@ html {
     height: 100%;
 }
 
+
+.navbar-default .navbar-brand {
+  font-family: 'Niconne', cursive;
+  font-size: 2em;
+}
+
 @media(min-width:767px) {
-    .navbar {
+    .navbar-default {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background-color: transparent;
+        border: none;
     }
 
-    .navbar.affix {
+    .navbar-default .navbar-brand {
+      color: transparent;
+    }
+
+    .navbar-default.affix .navbar-brand {
+      color: white;
+    }
+
+    .navbar-default.affix {
         padding: 0;
+        background-color: #f58c90;
     }
 }
 
-/* Demo Sections - You can use these as guides or delete them -
-the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to.
- Adjust the margin and padding of sections and children
-of those sections to manage the look and feel of the site. */
-
 .intro-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
+    padding-bottom: 50px;
     text-align: center;
-    /* background: #fff; */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .intro-title {
   font-family: 'Niconne', cursive;
-  font-size: 50px;
+  font-size: 150px;
 }
 
-.servicos-section {
-    padding-top: 80px;
-    padding-bottom: 50px;
-    text-align: center;
-    background: #eee;
+#servicos {
+  padding-top: 60px;
+  text-align: center;
+  background: #eee;
+}
+
+#servicos .servico-btn {
+  margin-top: 15px;
+  margin-bottom: 60px;
 }
 
 .video-section {
@@ -70,14 +86,41 @@ of those sections to manage the look and feel of the site. */
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-    background: #eee;
 }
 
+#sobre .col-sobre {
+  background-color: white;
+  padding: 40px 60px 50px 40px;
+}
+
+@media(min-width:767px) {
+  #sobre .col-sobre {
+    padding: 60px 90px 70px 70px;
+  }
+}
+
+#sobre .img-gabi {
+  max-width: 180px;
+  margin: 0 20px 10px 0;
+}
+
+#sobre .icone-estrela {
+  margin: 20px 0 20px;
+}
 
 .livros-section {
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 50px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#livros .livros-heading {
+  font-weight: bold;
+}
+
+#livros .livros-heading {
+  padding-bottom: 50px;
 }
 
 #livros .livro-item {
@@ -86,7 +129,7 @@ of those sections to manage the look and feel of the site. */
 #livros .livro-item .livro-link {
   display: block;
   position: relative;
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
   outline: none;
 }
@@ -117,31 +160,26 @@ of those sections to manage the look and feel of the site. */
   margin-top: -12px;
 }
 #livros .livro-item .livro-caption {
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
   background-color: white;
   text-align: center;
-  padding: 25px;
+  padding: 5px 20px 20px;
 }
 #livros * {
   z-index: 2;
 }
 
-
 .imprensa-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
 }
 
 .contato-section {
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 100px;
     text-align: center;
-}
-
-#form-block {
-  padding-bottom: 20px;
-  background: #fff;
+    min-height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
 }
