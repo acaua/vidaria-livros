@@ -24,17 +24,18 @@ html {
 
 
 .navbar-default .navbar-brand {
-  font-family: 'Niconne', cursive;
+  font-family: 'Fredericka the Great', cursive;
   font-size: 2em;
 }
 
 @media(min-width:767px) {
     .navbar-default {
-        padding: 20px 0;
+        /*padding: 20px 0;*/
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
         background-color: transparent;
+        background-color: #f58c90;
         border: none;
     }
 
@@ -43,7 +44,7 @@ html {
     }
 
     .navbar-default.affix .navbar-brand {
-      color: white;
+      color: #323232;
     }
 
     .navbar-default.affix {
@@ -52,17 +53,48 @@ html {
     }
 }
 
-.intro-section {
+#intro {
     min-height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 50px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.5);
 }
 
-.intro-title {
-  font-family: 'Niconne', cursive;
-  font-size: 150px;
+#intro .intro-banner {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0 20px;
+  margin-bottom: 30px;
+}
+
+#intro .intro-title {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 8.5em;
+  color: #f54f29;
+}
+
+#intro .intro-servicos {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #9c9b7a;
+  color: white;
+  font-size: 1.5em;
+}
+
+#intro .separador-servico {
+  font-size: 0.5em;
+  margin: 0 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#intro .intro-poema {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8em;
+  padding-bottom: 20px;
+}
+
+#intro .intro-texto {
+  font-size: 1.2em;
 }
 
 #servicos {
@@ -168,6 +200,10 @@ html {
 }
 #livros * {
   z-index: 2;
+}
+
+.modal-livro .livro-titulo-modal {
+  padding-bottom: 10px;
 }
 
 .imprensa-section {
