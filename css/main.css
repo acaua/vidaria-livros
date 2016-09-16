@@ -30,26 +30,31 @@ html {
 
 @media(min-width:767px) {
     .navbar-default {
-        /*padding: 20px 0;*/
+        /*padding: 10px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-        background-color: transparent;
-        background-color: #f58c90;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;*/
+        background-color: #f54f29;
         border: none;
     }
 
+    /*.navbar-default.affix {
+        padding: 0;
+    }*/
+
     .navbar-default .navbar-brand {
       color: transparent;
+      -webkit-transition: color .5s ease-in-out;
+      -moz-transition: color .5s ease-in-out;
+      transition: color .5s ease-in-out;
     }
 
     .navbar-default.affix .navbar-brand {
-      color: #323232;
+      color: white;
     }
 
-    .navbar-default.affix {
-        padding: 0;
-        background-color: #f58c90;
+    .navbar-default .navbar-nav > li > a {
+      color: white;
     }
 }
 
@@ -62,22 +67,22 @@ html {
 
 #intro .intro-banner {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 0 20px;
+  padding: 0px 0 10px;
   margin-bottom: 30px;
 }
 
 #intro .intro-title {
   font-family: 'Fredericka the Great', cursive;
-  font-size: 8.5em;
+  font-size: 8em;
   color: #f54f29;
 }
 
 #intro .intro-servicos {
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #9c9b7a;
+  padding: 5px 0;
+  margin-bottom: 25px;
+  background-color: #336688;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 #intro .separador-servico {
@@ -90,7 +95,8 @@ html {
 #intro .intro-poema {
   font-family: 'Satisfy', cursive;
   font-size: 1.8em;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #intro .intro-texto {
@@ -218,4 +224,39 @@ html {
     text-align: center;
     min-height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-custom {
+  background-color: #f54f29;
+  border-color: #f54f29;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #f43b11;
+  border-color: #e1320a;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #f54f29;
+  border-color: #f54f29;
+}
+
+a.btn-custom, button.btn-custom {
+  color: white;
+}
+
+.fa.text-primary {
+  color: #f54f29;
 }
