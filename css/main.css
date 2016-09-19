@@ -7,14 +7,13 @@
 body {
     width: 100%;
     height: 100%;
-
-
     min-height: 100%;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url("../img/background.jpg");
+
 }
 
 html {
@@ -22,25 +21,24 @@ html {
     height: 100%;
 }
 
-
 .navbar-default .navbar-brand {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
 }
 
 @media(min-width:767px) {
     .navbar-default {
-        /*padding: 10px 0;
+        /*padding: 15px 0;*/
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;*/
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
         background-color: #f54f29;
         border: none;
     }
 
-    /*.navbar-default.affix {
-        padding: 0;
-    }*/
+    .navbar-default.affix {
+        border: none;
+    }
 
     .navbar-default .navbar-brand {
       color: transparent;
@@ -56,51 +54,70 @@ html {
     .navbar-default .navbar-nav > li > a {
       color: white;
     }
+
+    /*.navbar-default.affix .navbar-nav > li > a {
+      color: white;
+    }*/
 }
 
 #intro {
     min-height: 100%;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 50px;
+    margin-bottom: 100px;
     text-align: center;
-}
-
-#intro .intro-banner {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 0px 0 10px;
-  margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #intro .intro-title {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 8em;
+  font-family: 'Playfair Display', serif;
+  font-size: 5em;
   color: #f54f29;
+  margin-top: 0;
 }
 
 #intro .intro-servicos {
-  padding: 5px 0;
+  padding: 8px 5px;
   margin-bottom: 25px;
-  background-color: #336688;
-  color: white;
-  font-size: 1.3em;
-}
-
-#intro .separador-servico {
-  font-size: 0.5em;
-  margin: 0 20px;
-  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 1em;
   display: inline-block;
+  list-style-type: none;
+  font-weight: bold;
 }
 
-#intro .intro-poema {
-  font-family: 'Satisfy', cursive;
-  font-size: 1.8em;
-  padding-top: 15px;
-  padding-bottom: 15px;
+@media(min-width:767px) {
+  #intro .intro-title {
+    font-size: 7.5em;
+    color: #f54f29;
+  }
+
+  #intro .intro-servicos {
+    font-size: 1.1em;
+  }
+
+  #intro .intro-servicos li {
+    display: inline-block;
+    padding: 0 30px;
+  }
 }
 
 #intro .intro-texto {
-  font-size: 1.2em;
+  padding-top: 12px;
+  font-size: 1.25em;
+  color: black;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+#intro .intro-poema {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  color: #f54f29;
+  line-height: 1.3;
+  /*font-size: 2.8em;*/
+  /*font-family: 'Reenie Beanie', cursive;*/
+  font-size: 1.7em;
+  font-family: 'Josefin Slab';
 }
 
 #servicos {
@@ -155,9 +172,6 @@ html {
 
 #livros .livros-heading {
   font-weight: bold;
-}
-
-#livros .livros-heading {
   padding-bottom: 50px;
 }
 
@@ -213,17 +227,145 @@ html {
 }
 
 .imprensa-section {
-    height: 100%;
-    padding-top: 150px;
+    padding-top: 60px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
+#imprensa .imprensa-heading {
+  font-weight: bold;
+  padding-bottom: 50px;
+  color: white;
+}
+
+#imprensa .imprensa-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+#imprensa .imprensa-item .imprensa-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  outline: none;
+}
+#imprensa .imprensa-item .imprensa-link .imprensa-hover {
+  background: rgba(254, 209, 54, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+#imprensa .imprensa-item .imprensa-link .imprensa-hover:hover {
+  opacity: 1;
+}
+#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content i {
+  margin-top: -12px;
+}
+#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content h3,
+#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content h4 {
+  margin: 0;
+}
+#imprensa .imprensa-item .imprensa-caption {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 25px;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  text-decoration: none;
+}
+#imprensa .imprensa-item .imprensa-caption h4 {
+  text-transform: none;
+  margin: 0;
+}
+#imprensa .imprensa-item .imprensa-caption p {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin: 0;
+}
+#imprensa * {
+  z-index: 2;
+}
+@media (min-width: 767px) {
+  #imprensa .imprensa-item {
+    margin: 0 0 30px;
+  }
+}
+
 .contato-section {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
-    min-height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    min-height: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background-color: #f54f29;
+}
+footer span.copyright {
+  line-height: 40px;
+}
+
+footer span.copyright a {
+  line-height: 40px;
+  text-decoration: underline;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+ul.social-buttons li a {
+  display: block;
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #fed136;
+}
+
+.panel-custom {
+  border-color: #f54f29;
+}
+
+.panel-custom>.panel-heading {
+  background-color: #f54f29;
+  border-color: #f54f29;
+}
+
+.panel-custom .panel-title {
+  color: white;
+  font-size: 1.7em;
 }
 
 .btn-custom {
@@ -259,4 +401,22 @@ a.btn-custom, button.btn-custom {
 
 .fa.text-primary {
   color: #f54f29;
+}
+
+a {
+  color: #333333;
+}
+
+a:focus .modal , a:hover .modal {
+  color: #333333;
+}
+
+p.dropcap:first-child:first-letter {
+  float: left;
+  color: #555;
+  font-size: 70px;
+  line-height: 56px;
+  padding-top: 3px;
+  padding-right: 6px;
+  font-family: Georgia;
 }
