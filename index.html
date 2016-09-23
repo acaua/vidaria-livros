@@ -21,13 +21,10 @@
   <link href="css/main.css" rel="stylesheet">
 
   <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Droid+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Droid+Sans" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Josefin+Slab:700i" rel="stylesheet">
 
-
-  <!-- Color picker - should not go on git -->
-  <link rel='stylesheet' href='css/spectrum.css'>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -289,8 +286,8 @@
 
   <!-- imprensa Section -->
   <section id="imprensa" class="imprensa-section">
+    <h1 class="imprensa-heading">Imprensa</h1>
     <div class="container">
-      <h1 class="imprensa-heading">Imprensa</h1>
       <div class="row">
         <div class="col-md-3 col-sm-4 col-xs-6 imprensa-item">
           <a href="#imprensa-modal-1" class="imprensa-link" data-toggle="modal">
@@ -318,6 +315,7 @@
             <h4>Jornal da Cultura</h4>
           </a>
         </div>
+        <div class="clearfix visible-xs-block"></div>
         <div class="col-md-3 col-sm-4 col-xs-6 imprensa-item">
           <a href="#imprensa-modal-3" class="imprensa-link" data-toggle="modal">
             <div class="imprensa-hover">
@@ -344,6 +342,7 @@
             <h4>Folha de S.Paulo</h4>
           </a>
         </div>
+        <div class="clearfix visible-xs-block"></div>
         <div class="col-md-3 col-sm-4 col-xs-6 imprensa-item">
           <a href="#imprensa-modal-5" class="imprensa-link" data-toggle="modal">
             <div class="imprensa-hover">
@@ -370,6 +369,7 @@
             <h4>Metro</h4>
           </a>
         </div>
+        <div class="clearfix visible-xs-block"></div>
         <div class="col-md-3 col-sm-4 col-xs-6 imprensa-item">
           <a href="#imprensa-modal-7" class="imprensa-link" data-toggle="modal">
             <div class="imprensa-hover">
@@ -454,7 +454,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <span class="copyright">Copyright &copy; Vidaria Livros 2016</span>
+          <span class="copyright">Copyright &copy; Vidaria Livros 2016 - </span>
+          <a href="#creditos-modal" data-toggle="modal">
+            créditos
+          </a>
         </div>
         <div class="col-sm-4">
           <ul class="list-inline social-buttons">
@@ -467,37 +470,12 @@
           </ul>
         </div>
         <div class="col-sm-4">
-          <span class="copyright">
+          <span class="author">
             Feito com <i class="fa fa-heart"></i> e <i class="fa fa-coffee"></i> por <a href="https://linkedin.com/in/acauafaria">Acauã Sperl de Faria</a></span>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Color picking -->
-    <!-- <section id="cores" class="cores-section" style="min-height: 50%; background-color: white;">
-    <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-    <h1>Cores</h1>
-    <label for="pick-intro-title">Título:</label>
-    <input type='text' id="pick-intro-title">
-    <br>
-    <label for="pick-icones">Ícones:</label>
-    <input type='text' id="pick-icones">
-    <br>
-    <label for="pick-btn">Botões:</label>
-    <input type='text' id="pick-btn">
-    <br>
-    <label for="pick-menu">Menu:</label>
-    <input type='text' id="pick-menu">
-    <br>
-    <label for="pick-servicos">Barra serviços:</label>
-    <input type='text' id="pick-servicos">
-  </div>
-</div>
-</div>
-</section> -->
 
 
 <!-- Servico Modal 1 -->
@@ -684,16 +662,36 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <!-- <h4 class="modal-title text-center">Diário do Grande ABC</h4> -->
       </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="text-center">
-              <a href="http://www.dgabc.com.br/Noticia/1316168/a-vida-e-seus-diversos-sentidos">Diário do Grande ABC</a>
-            </h2>
-            <!-- <img class="img-responsive center-block" src="img/imprensa/imprensa1.png" alt=""> -->
-          </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista ao programa Caminhos Alternativos da Rádio CBN
+        </h4>
+        <a href="http://cbn.globoradio.globo.com/programas/caminhos-alternativos/2015/03/28/VOCE-SABE-QUAL-E-O-SENTIDO-DA-VIDA.htm" target="_blank">
+          Ouça aqui
+          <img src="img/imprensa/CBN600X450.png" class="img-responsive center-block" alt="">
+        </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 2 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista ao Jornal da Cultura
+        </h4>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wMA7ZolF2qc?rel=0" allowfullscreen></iframe>
         </div>
       </div>
       <div class="modal-footer">
@@ -703,6 +701,187 @@
   </div>
 </div>
 
+<!-- Imprensa Modal 3 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista ao Diário do Grande ABC
+        </h4>
+        <a href="http://www.dgabc.com.br/Noticia/1316168/a-vida-e-seus-diversos-sentidos" target="_blank">
+          Leia aqui
+          <img src="img/imprensa/DGABC600X450.png" class="img-responsive center-block" alt="">
+        </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 4 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista à Folha de S.Paulo
+        </h4>
+        <a href="http://mortesemtabu.blogfolha.uol.com.br/2015/04/24/procura-se-um-sentido-para-a-vida/" target="_blank">
+          Leia aqui
+          <img src="img/imprensa/folha-full.jpg" class="img-responsive center-block" alt="">
+        </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 5 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-5" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista ao UOL
+        </h4>
+        <a href="http://paginacinco.blogosfera.uol.com.br/2015/04/16/jornalista-faz-vasta-busca-pelo-sentido-da-vida-e-reune-respostas-em-livro/" target="_blank">
+          Leia aqui
+          <img src="img/imprensa/uol-full.jpg" class="img-responsive center-block" alt="">
+        </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 6 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-6" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista ao jornal Metro
+        </h4>
+          <img src="img/imprensa/metro-full.png" class="img-responsive center-block" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 7 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4>
+          Entrevista à Revista Repúbica
+        </h4>
+          <img src="img/imprensa/republica-full.jpg" class="img-responsive center-block" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Imprensa Modal 8 -->
+<div class="modal fade modal-imprensa" id="imprensa-modal-8" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">
+          Confira as entrevistas aos veículos:
+        </h4>
+        <ul>
+          <li>
+          <a href="http://www.gazetaam.com/dica-de-livro/" target="_blank">
+            Gazeta AM
+          </a>
+          </li>
+          <li>
+          <a href="http://brasilcampinas.com.br/livro-traz-diversos-relatos-sobre-o-sentido-da-vida.html" target="_blank">
+            Rádio Brasil Campinas
+          </a>
+          </li>
+          <li>
+          <a href="https://www.youtube.com/watch?v=BYGr01Kesr8" target="_blank">
+            RIT TV
+          </a>
+          </li>
+          <li>
+          <a href="https://www.youtube.com/watch?v=lJuXd8QRQaQ" target="_blank">
+            Casa da Joanna
+          </a>
+          </li>
+          <li>
+          <a href="http://www.jornalirismo.com.br/jornalismo/qual-e-o-sentido-da-vida/" target="_blank">
+            Jornalirismo
+          </a>
+          </li>
+          <li>
+          <a href="http://portalmauaeregiao.com.br/0/1/2015/05/25/vidaria-de-gabriela-gasparin/" target="_blank">
+            Portal Mauá e Região
+          </a>
+          </li>
+          <li>
+          Revista Vero:
+          <img src="img/imprensa/vero-full.jpg" class="img-responsive center-block" alt="">
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="creditos-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+      <div>
+        Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -726,9 +905,6 @@ ga('send', 'pageview');
 
 </script>
 
-<!-- Color picker - should not go to git -->
-<script src='js/spectrum.js'></script>
-<script src='js/color-picker.js'></script>
 
 </body>
 

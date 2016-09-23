@@ -66,13 +66,13 @@ html {
     padding-bottom: 50px;
     margin-bottom: 100px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 #intro .intro-title {
   font-family: 'Playfair Display', serif;
   font-size: 5em;
-  color: #f54f29;
+  color: #303030;
   margin-top: 0;
 }
 
@@ -89,7 +89,6 @@ html {
 @media(min-width:767px) {
   #intro .intro-title {
     font-size: 7.5em;
-    color: #f54f29;
   }
 
   #intro .intro-servicos {
@@ -137,10 +136,20 @@ html {
     text-align: center;
 }
 
-.sobre-section {
+#sobre {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
+}
+
+p.dropcap:first-child:first-letter {
+  float: left;
+  color: #555;
+  font-size: 70px;
+  line-height: 56px;
+  padding-top: 3px;
+  padding-right: 6px;
+  font-family: Georgia;
 }
 
 #sobre .col-sobre {
@@ -163,7 +172,7 @@ html {
   margin: 20px 0 20px;
 }
 
-.livros-section {
+#livros {
     padding-top: 60px;
     padding-bottom: 50px;
     text-align: center;
@@ -226,7 +235,7 @@ html {
   padding-bottom: 10px;
 }
 
-.imprensa-section {
+#imprensa {
     padding-top: 60px;
     padding-bottom: 50px;
     text-align: center;
@@ -234,13 +243,12 @@ html {
 
 #imprensa .imprensa-heading {
   font-weight: bold;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   color: white;
 }
 
 #imprensa .imprensa-item {
-  margin: 0 0 15px;
-  right: 0;
+  margin: 0 0 30px;
 }
 #imprensa .imprensa-item .imprensa-link {
   display: block;
@@ -275,41 +283,23 @@ html {
 #imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content i {
   margin-top: -12px;
 }
-#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content h3,
-#imprensa .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content h4 {
-  margin: 0;
-}
 #imprensa .imprensa-item .imprensa-caption {
   display: block;
   max-width: 400px;
-  margin: 0 auto;
-  background-color: #f2f2f2;
   text-align: center;
-  padding: 25px;
-  border: 1px solid #bfbfbf;
+  padding: 25px 0;
+  background-color: #f2f2f2;
   outline: none;
-  text-decoration: none;
 }
 #imprensa .imprensa-item .imprensa-caption h4 {
-  text-transform: none;
   margin: 0;
-}
-#imprensa .imprensa-item .imprensa-caption p {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 16px;
-  margin: 0;
+  color: #333;
 }
 #imprensa * {
   z-index: 2;
 }
-@media (min-width: 767px) {
-  #imprensa .imprensa-item {
-    margin: 0 0 30px;
-  }
-}
 
-.contato-section {
+#contato {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
@@ -322,13 +312,14 @@ footer {
   text-align: center;
   background-color: #f54f29;
 }
+
 footer span.copyright {
   line-height: 40px;
+  text-decoration: none;
 }
 
-footer span.copyright a {
+footer span.author {
   line-height: 40px;
-  text-decoration: underline;
 }
 
 ul.social-buttons {
@@ -403,20 +394,3 @@ a.btn-custom, button.btn-custom {
   color: #f54f29;
 }
 
-a {
-  color: #333333;
-}
-
-a:focus .modal , a:hover .modal {
-  color: #333333;
-}
-
-p.dropcap:first-child:first-letter {
-  float: left;
-  color: #555;
-  font-size: 70px;
-  line-height: 56px;
-  padding-top: 3px;
-  padding-right: 6px;
-  font-family: Georgia;
-}

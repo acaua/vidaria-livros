@@ -48,7 +48,7 @@ $(document).ready(function() {
   });
 
 
-  $(".modal-servico").on('hide.bs.modal', function(){
+  $(".modal").on('hide.bs.modal', function(){
     var url = $(this).find("iframe").attr('src');
     $(this).find("iframe").attr('src', '');
     $(this).find("iframe").attr('src', url);
