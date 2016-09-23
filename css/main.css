@@ -63,8 +63,8 @@ html {
 #intro {
     min-height: 100%;
     padding-top: 60px;
-    padding-bottom: 50px;
-    margin-bottom: 100px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
 }
@@ -77,67 +77,111 @@ html {
 }
 
 #intro .intro-servicos {
-  padding: 8px 5px;
-  margin-bottom: 25px;
+  padding: 8px 15px;
   background-color: rgba(255, 255, 255, 0.6);
-  font-size: 1em;
   display: inline-block;
   list-style-type: none;
   font-weight: bold;
 }
 
-@media(min-width:767px) {
+#intro .intro-servicos li {
+  padding: 2px 5px;
+  font-size: 1.1em;
+}
+
+@media(min-width:768px) {
   #intro .intro-title {
     font-size: 7.5em;
   }
 
   #intro .intro-servicos {
-    font-size: 1.1em;
+    margin-bottom: 20px;
   }
 
   #intro .intro-servicos li {
     display: inline-block;
+    padding: 0 11px;
+    font-size: 1.05em;
+  }
+}
+
+@media(min-width:992px) {
+  #intro .intro-servicos li {
     padding: 0 30px;
+    font-size: 1.1em;
   }
 }
 
 #intro .intro-texto {
-  padding-top: 12px;
+  padding-top: 10px;
   font-size: 1.25em;
   color: black;
   font-family: 'Droid Sans', sans-serif;
 }
 
 #intro .intro-poema {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 25px;
   color: #f54f29;
   line-height: 1.3;
-  /*font-size: 2.8em;*/
-  /*font-family: 'Reenie Beanie', cursive;*/
   font-size: 1.7em;
   font-family: 'Josefin Slab';
 }
 
 #servicos {
-  padding-top: 60px;
+  padding-top: 40px;
+}
+
+#servicos .container-servicos {
+  padding-top: 30px;
   text-align: center;
   background: #eee;
 }
 
-#servicos .servico-btn {
-  margin-top: 15px;
-  margin-bottom: 60px;
+#servicos .fa.icon-servico {
+  color: #f54f29;
 }
 
-.video-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+#servicos h4 {
+  font-size: 1.35em;
+}
+
+#servicos .text-servico {
+  padding: 0 10px;
+  text-align: justify;
+}
+
+@media(min-width: 500px) {
+  #servicos .text-servico {
+    padding: 0 100px;
+  }  
+}
+
+@media(min-width: 768px) {
+  #servicos .text-servico {
+    padding: 0;
+  }  
+}
+
+@media(min-width: 992px) {
+  #servicos .text-servico {
+    padding: 0 20px;
+  }  
+}
+
+#servicos .servico-btn {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+#video {
+    padding-top: 80px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
 #sobre {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
     text-align: center;
 }
@@ -152,28 +196,56 @@ p.dropcap:first-child:first-letter {
   font-family: Georgia;
 }
 
+#sobre .with-margin {
+  margin: 0 -5px;
+}
+
 #sobre .col-sobre {
   background-color: white;
-  padding: 40px 60px 50px 40px;
-}
-
-@media(min-width:767px) {
-  #sobre .col-sobre {
-    padding: 60px 90px 70px 70px;
-  }
-}
-
-#sobre .img-gabi {
-  max-width: 180px;
-  margin: 0 20px 10px 0;
+  padding: 40px 50px 40px 40px;
 }
 
 #sobre .icone-estrela {
-  margin: 20px 0 20px;
+  padding: 10px 0 20px;
+}
+
+
+#sobre .img-gabi {
+    float: none;
+    max-width: 150px;
+    margin: 0 auto 10px;
+  }
+
+@media(min-width: 390px) {
+  #sobre .img-gabi {
+    float: left;
+    max-width: 150px;
+    margin: 0 10px 0 0;
+  }
+}
+
+@media(min-width: 455px) {
+  #sobre .img-gabi {
+    margin: 0 20px 10px 0;
+  }
+}
+
+@media(min-width:767px) {
+  #sobre .with-margin {
+    margin: 0 5px;
+  }
+
+  #sobre .col-sobre {
+    padding: 60px 100px 50px 90px;
+  }
+
+  #sobre .icone-estrela {
+    padding: 15px 0 25px;
+  }
 }
 
 #livros {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -236,14 +308,14 @@ p.dropcap:first-child:first-letter {
 }
 
 #imprensa {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
 }
 
 #imprensa .imprensa-heading {
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   color: white;
 }
 
@@ -388,9 +460,5 @@ fieldset[disabled] .btn-custom.active {
 
 a.btn-custom, button.btn-custom {
   color: white;
-}
-
-.fa.text-primary {
-  color: #f54f29;
 }
 
