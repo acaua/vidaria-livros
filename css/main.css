@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
 
 body {
     width: 100%;
@@ -61,7 +56,6 @@ html {
 }
 
 #intro {
-    min-height: 100%;
     padding-top: 60px;
     padding-bottom: 40px;
     margin-bottom: 50px;
@@ -73,7 +67,7 @@ html {
   font-family: 'Playfair Display', serif;
   font-size: 5em;
   color: #303030;
-  margin-top: 0;
+  margin: 0;
 }
 
 #intro .intro-servicos {
@@ -95,7 +89,7 @@ html {
   }
 
   #intro .intro-servicos {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   #intro .intro-servicos li {
@@ -120,8 +114,8 @@ html {
 }
 
 #intro .intro-poema {
-  padding-top: 15px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   color: #f54f29;
   line-height: 1.3;
   font-size: 1.7em;
@@ -133,9 +127,15 @@ html {
 }
 
 #servicos .container-servicos {
-  padding-top: 30px;
+  padding-top: 25px;
   text-align: center;
   background: #eee;
+}
+
+#servicos .title-servico {
+  padding-bottom: 15px;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 
 #servicos .fa.icon-servico {
@@ -148,7 +148,7 @@ html {
 
 #servicos .text-servico {
   padding: 0 10px;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 @media(min-width: 500px) {
@@ -182,7 +182,7 @@ html {
 
 #sobre {
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -248,11 +248,12 @@ p.dropcap:first-child:first-letter {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
 #livros .livros-heading {
   font-weight: bold;
+  color: white;
   padding-bottom: 50px;
 }
 
@@ -307,10 +308,42 @@ p.dropcap:first-child:first-letter {
   padding-bottom: 10px;
 }
 
+#vidaria {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#vidaria .logo-vidaria {
+  max-height: 120px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#vidaria .text-vidaria {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+#vidaria .img-vidaria {
+  max-height: 480px;
+}
+
+@media(max-width: 767px) {
+  #vidaria .text-vidaria {
+    font-size: 1em;
+  }
+  #vidaria .img-vidaria {
+    max-height: 400px;
+    margin: auto;
+  }
+}
+
 #imprensa {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
 #imprensa .imprensa-heading {
@@ -380,7 +413,7 @@ p.dropcap:first-child:first-letter {
 }
 
 footer {
-  padding: 25px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: #f54f29;
 }
