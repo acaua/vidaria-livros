@@ -1,0 +1,603 @@
+
+$palette1: #FF4242; // rosa
+$palette2: #FF5B64; //#FF1760; 
+$palette3: rgba(255, 142, 142, 0.9);
+
+
+
+$menuBg: $palette1;
+$menuBrandColor: white;
+$menuHighlight: green;
+$menuColor: white;
+$menuActiveBg: blue;
+
+$sectionBg: rgba(255, 255, 255, 0.7);
+
+$introServicoColor: $palette1;
+$introServicoBg: rgba(255, 255, 255, 0.8);
+$poemaColor: white;
+$poemaBg: rgba(92, 92, 92, 0.8); 
+// $poemaBg: rgba(255, 66, 66, 0.7); 
+
+$servicosBg: white;
+$servicoIconColor: $palette1;
+
+$livrosHeadingColor: white;
+$livroHoverBg: $palette3;
+
+$vidariaBg: $sectionBg;
+
+$imprensaHeadingColor: white;
+$imprensaHoverBg: $palette3;
+
+
+$footerBg: $menuBg;
+$socialBtnBg: #222222;
+$socialBtnHover: $palette2; //#fed136;
+
+$btnBg: $palette1;
+$btnBorder: #E53B3B;//$btnBg; // escurecer
+$btnColor: $menuColor;
+$btnActiveBg: $btnBg; // escurecer
+
+$panelBorder: $menuBg;
+$panelHeadingBg: $menuBg;
+$panelTitleColor: $menuColor;
+
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/background.jpg");
+
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-default {
+  background-color: $menuBg;
+  border: none;
+
+  .navbar-toggle .icon-bar {
+    background-color: white;
+  }
+
+  .navbar-brand {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    display: block;
+    float: none;
+    text-align: center;
+    color: $menuBrandColor;
+    &:hover, &:focus {
+      color: $menuHighlight;
+    }
+  }
+
+  @media(min-width:767px) {
+    .navbar-brand {
+      text-align: left;
+      color: transparent;
+      &:hover, &:focus {
+        color: transparent;
+      }
+    }
+
+
+    &.affix .navbar-brand {
+      color: $menuBrandColor;
+      &:hover, &:focus {
+        color: $menuHighlight;
+      }
+    }
+
+    .navbar-nav {
+      > li {
+        > a {
+          color: $menuColor;
+          &:hover,  &:focus {
+            color: $menuHighlight; 
+          }
+        }
+        > .active {
+          > a, > a:hover, > a:focus {
+            color: $menuHighlight;
+            background-color: blue;//$menuActiveBg; 
+          }
+        }
+        > .open {
+          > a, > a:hover, > a:focus {
+            color: $menuBg;
+            background-color: $menuActiveBg; 
+          }
+        }
+      }
+    }
+  }
+}
+
+#intro {
+  padding-top: 130px;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: $sectionBg;
+
+  .bookmark {
+    max-width: 78px;
+    position: relative;
+    top: -32px;
+    left: 10px;
+  }
+
+  .intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+    font-weight: 700;
+    margin: 0;
+    display: inline;
+  }
+
+  .intro-servicos {
+    padding: 8px 15px;
+    background-color: $introServicoBg;
+    color: $introServicoColor;
+    list-style-type: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .intro-servicos li {
+    padding: 2px 5px;
+    font-size: 1.1em;
+  }
+
+  @media(min-width:768px) {
+    .intro-title {
+      font-size: 7.5em;
+    }
+
+    .intro-servicos {
+      margin-bottom: 15px;
+    }
+
+    .intro-servicos li {
+      display: inline-block;
+      padding: 0 11px;
+      font-size: 1.05em;
+    }
+  }
+
+  @media(min-width:992px) {
+    .intro-servicos li {
+      padding: 0 30px;
+      font-size: 1.1em;
+    }
+  }
+
+  .intro-texto {
+    padding-top: 10px;
+    font-size: 1.25em;
+    font-family: 'Droid Sans', sans-serif;
+  }
+
+  .intro-poema {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.6em;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+  }
+
+  mark {
+    color: $poemaColor;
+    background-color: $poemaBg;
+    padding: 0 10px;
+  }
+
+  mark.first {
+    padding-left: 10px;
+    margin-right: 10px;
+  }
+
+  mark.last {
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#servicos {
+  padding-top: 40px;
+
+  .container-servicos {
+    padding-top: 25px;
+    text-align: center;
+    background-color: $servicosBg;
+  }
+
+  .title-servico {
+    padding-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+
+  .fa.icon-servico {
+    color: $servicoIconColor;
+  }
+
+  h4 {
+    font-size: 1.35em;
+  }
+
+  .text-servico {
+    padding: 0 10px;
+  }
+
+  @media(min-width: 500px) {
+    .text-servico {
+      padding: 0 100px;
+    }  
+  }
+
+  @media(min-width: 768px) {
+    .text-servico {
+      padding: 0;
+    }  
+  }
+
+  @media(min-width: 992px) {
+    .text-servico {
+      padding: 0 20px;
+    }  
+  }
+
+  .servico-btn {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+#video {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+#sobre {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  .sobre-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    font-weight: 700;
+  }
+
+  .sobre-text {
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.05em;
+  }
+
+  .dropcap {
+    float: left;
+    font-size: 70px;
+    line-height: 56px;
+    padding-top: 3px;
+    padding-right: 6px;
+    font-family: Georgia;
+  }
+
+  .with-margin {
+    margin: 0 -5px;
+  }
+
+  .col-sobre {
+    background-color: white;
+    padding: 40px 50px 40px 40px;
+  }
+
+  .icone-estrela {
+    padding: 10px 0 20px;
+  }
+
+
+  .img-gabi {
+    float: none;
+    max-width: 150px;
+    margin: 0 auto 10px;
+  }
+
+  @media(min-width: 390px) {
+    .img-gabi {
+      float: left;
+      max-width: 225px;
+      margin: 0 10px 0 0;
+    } 
+  }
+
+  @media(min-width: 455px) {
+   .img-gabi {
+      margin: 0 20px 10px 0;
+    }
+  }
+
+  @media(min-width:767px) {
+   .with-margin {
+      margin: 0 5px;
+    }
+
+    .col-sobre {
+      padding: 60px 100px 50px 90px;
+    }
+
+    .icone-estrela {
+      padding: 15px 0 25px;
+    }
+  }
+} 
+
+#livros {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  .livros-heading {
+    font-weight: bold;
+    color: $livrosHeadingColor;
+    padding-bottom: 50px;
+  }
+
+  .livro-item {
+    margin-bottom: 30px;
+  }
+  .livro-item .livro-link {
+    display: block;
+    position: relative;
+    max-width: 250px;
+    margin: 0 auto;
+    outline: none;
+  }
+  .livro-item .livro-link .livro-hover {
+    background-color: $livroHoverBg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+  }
+  .livro-item .livro-link .livro-hover:hover {
+    opacity: 1;
+  }
+  .livro-item .livro-link .livro-hover .livro-hover-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+  }
+  .livro-item .livro-link .livro-hover .livro-hover-content i {
+    margin-top: -12px;
+  }
+  .livro-item .livro-caption {
+    max-width: 250px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    padding: 5px 20px 20px;
+  }
+  * {
+    z-index: 2;
+  }
+}
+
+
+.modal-livro .livro-titulo-modal {
+  padding-bottom: 10px;
+}
+
+#vidaria {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: $vidariaBg;
+
+  .logo-vidaria {
+    max-height: 120px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .text-vidaria {
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  .img-vidaria {
+    max-height: 480px;
+  }
+
+  @media(max-width: 767px) {
+    .text-vidaria {
+      font-size: 1em;
+    }
+    .img-vidaria {
+      max-height: 400px;
+      margin: auto;
+    }
+  }
+}
+
+#imprensa {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  .imprensa-heading {
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: $imprensaHeadingColor;
+  }
+
+  .imprensa-item {
+    margin: 0 0 30px;
+  }
+  .imprensa-item .imprensa-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    outline: none;
+  }
+  .imprensa-item .imprensa-link .imprensa-hover {
+    background-color: $imprensaHoverBg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+  }
+  .imprensa-item .imprensa-link .imprensa-hover:hover {
+    opacity: 1;
+  }
+  .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+  }
+  .imprensa-item .imprensa-link .imprensa-hover .imprensa-hover-content i {
+    margin-top: -12px;
+  }
+  .imprensa-item .imprensa-caption {
+    display: block;
+    max-width: 400px;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #f2f2f2;
+    outline: none;
+  }
+  .imprensa-item .imprensa-caption h4 {
+    margin: 0;
+    color: #333;
+  }
+  * {
+    z-index: 2;
+  }
+}
+
+#contato {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  min-height: 50%;
+  background-color: $sectionBg;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: $footerBg;
+
+  span.copyright {
+    line-height: 40px;
+    text-decoration: none;
+  }
+
+  span.author {
+    line-height: 40px;
+  }
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+ul.social-buttons li a {
+  display: block;
+  background-color: $socialBtnBg;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: $socialBtnHover;
+}
+
+.panel-custom {
+  border-color: $panelBorder;
+
+  >.panel-heading {
+    background-color: $panelHeadingBg;
+    border-color: $panelBorder;
+  }
+
+  .panel-title {
+    color: $panelTitleColor;
+    font-size: 1.7em;
+  }
+}
+
+.btn-custom {
+  background-color: $btnBg;
+  border-color: $btnBorder;
+  color: $btnColor;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $btnActiveBg;
+    border-color: $btnBorder;
+  }
+
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active,
+  &.disabled.active,
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active,
+  &[disabled].active,
+  fieldset[disabled] &:hover,
+  fieldset[disabled] &:focus,
+  fieldset[disabled] &:active,
+  fieldset[disabled] &.active {
+    background-color: $btnActiveBg;
+    border-color: $btnBorder;
+  }
+
+}
