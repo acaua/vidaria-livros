@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   // Closes the Responsive Menu on Menu Item Click
   $('.navbar-collapse ul li a, .navbar-brand.page-scroll').click(function(){
-    $('.navbar-ex1-collapse').collapse('hide');
+    $('.navbar-collapse').collapse('hide');
   });
 
   //jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -23,7 +23,8 @@ $(document).ready(function() {
   // Assigning Ajax post of contact form instead of normal submit behavior
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
+    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ=='; // acaua.faria2@gmail.com
+    // var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t' // blogvidaria@gmail.com
     var base_url = '//formspree.io/';
     var url = base_url + atob(base64_email);
     var message = $("#contact-form").serialize();

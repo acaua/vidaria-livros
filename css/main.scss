@@ -1,44 +1,46 @@
 
-$palette1: #FF4242; // rosa
-$palette2: #FF5B64; //#FF1760; 
-$palette3: rgba(255, 142, 142, 0.9);
+$palette1: #FF4242;
+$palette2: #FF5B64;
+$palette2tp: rgba(255, 91, 100, 0.9);
+$palette3: #ff8e8e; // rosa mais claro
+$palette3tp: rgba(255, 142, 142, 0.9);
 
 
 
 $menuBg: $palette1;
 $menuBrandColor: white;
-$menuHighlight: green;
 $menuColor: white;
-$menuActiveBg: blue;
+$menuActiveBg: $palette3;
 
 $sectionBg: rgba(255, 255, 255, 0.7);
 
 $introServicoColor: $palette1;
 $introServicoBg: rgba(255, 255, 255, 0.8);
 $poemaColor: white;
-$poemaBg: rgba(92, 92, 92, 0.8); 
-// $poemaBg: rgba(255, 66, 66, 0.7); 
+$poemaBg: $palette2tp;
 
 $servicosBg: white;
 $servicoIconColor: $palette1;
 
 $livrosHeadingColor: white;
-$livroHoverBg: $palette3;
+$livrosHeadingBg: $palette2tp;
+$livroHoverBg: $palette2tp;
 
-$vidariaBg: $sectionBg;
+$vidariaBg: rgba(255, 255, 255, 0.8);//$sectionBg;
 
 $imprensaHeadingColor: white;
-$imprensaHoverBg: $palette3;
+$imprensaHeadingBg: $palette2tp;
+$imprensaHoverBg: $palette2tp;
 
 
 $footerBg: $menuBg;
-$socialBtnBg: #222222;
-$socialBtnHover: $palette2; //#fed136;
+$socialBtnColor: white;
+$socialBtnHover: $menuBg;
 
 $btnBg: $palette1;
-$btnBorder: #E53B3B;//$btnBg; // escurecer
+$btnBorder: #E53B3B;
 $btnColor: $menuColor;
-$btnActiveBg: $btnBg; // escurecer
+$btnActiveBg: #E53B3B;
 
 $panelBorder: $menuBg;
 $panelHeadingBg: $menuBg;
@@ -66,8 +68,20 @@ html {
   background-color: $menuBg;
   border: none;
 
-  .navbar-toggle .icon-bar {
-    background-color: white;
+  .navbar-toggle {
+    border-color: $menuColor;
+    &:focus {
+      background-color: $menuBg;
+    }
+    &:hover {
+      background-color: $menuActiveBg;
+    }
+    .icon-bar {
+      background-color: $menuColor;
+    }
+  }
+  .navbar-collapse {
+    border-color: $menuColor;
   }
 
   .navbar-brand {
@@ -80,49 +94,36 @@ html {
     display: block;
     float: none;
     text-align: center;
-    color: $menuBrandColor;
+    visibility: hidden;
+    color: transparent;
     &:hover, &:focus {
-      color: $menuHighlight;
+      color: transparent;
     }
   }
+  &.affix .navbar-brand {
+    visibility: visible;
+    color: $menuBrandColor;
+  }
 
-  @media(min-width:767px) {
-    .navbar-brand {
-      text-align: left;
-      color: transparent;
-      &:hover, &:focus {
-        color: transparent;
-      }
-    }
-
-
-    &.affix .navbar-brand {
-      color: $menuBrandColor;
-      &:hover, &:focus {
-        color: $menuHighlight;
-      }
-    }
-
-    .navbar-nav {
-      > li {
-        > a {
+  .navbar-nav {
+    > li {
+      > a {
+        color: $menuColor;
+        padding-left: 13px;
+        padding-right: 13px;
+        &:focus {
           color: $menuColor;
-          &:hover,  &:focus {
-            color: $menuHighlight; 
-          }
         }
-        > .active {
-          > a, > a:hover, > a:focus {
-            color: $menuHighlight;
-            background-color: blue;//$menuActiveBg; 
-          }
+        &:hover {
+          color: $menuColor;
+          background-color: $palette2; 
         }
-        > .open {
-          > a, > a:hover, > a:focus {
-            color: $menuBg;
-            background-color: $menuActiveBg; 
-          }
-        }
+      }
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $menuColor;
+        background-color: $menuActiveBg;
       }
     }
   }
@@ -209,13 +210,11 @@ html {
   }
 
   mark.first {
-    padding-left: 10px;
-    margin-right: 10px;
+    padding-left: 15px;
   }
 
   mark.last {
-    margin-left: 10px;
-    padding-right: 10px;
+    padding-right: 15px;
   }
 }
 
@@ -270,6 +269,10 @@ html {
   }
 }
 
+.modal .texto-modal-ajudo {
+  padding-right: 10px;
+}
+
 #video {
   padding-top: 80px;
   padding-bottom: 40px;
@@ -277,8 +280,8 @@ html {
 }
 
 #sobre {
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   text-align: center;
 
   .sobre-heading {
@@ -291,7 +294,8 @@ html {
     text-align: justify;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    font-size: 1.05em;
+    font-size: 1.1em;
+    padding-bottom: 10px;
   }
 
   .dropcap {
@@ -309,39 +313,40 @@ html {
 
   .col-sobre {
     background-color: white;
-    padding: 40px 50px 40px 40px;
+    padding: 20px 25px 25px 15px;
   }
 
   .icone-estrela {
     padding: 10px 0 20px;
   }
 
-
   .img-gabi {
     float: none;
-    max-width: 150px;
+    max-width: 200px;
     margin: 0 auto 10px;
   }
 
-  @media(min-width: 390px) {
+  @media(min-width: 400px) {
     .img-gabi {
       float: left;
-      max-width: 225px;
       margin: 0 10px 0 0;
     } 
+    .col-sobre {
+      padding: 40px 50px 40px 40px;
+    }
   }
 
-  @media(min-width: 455px) {
+  @media(min-width: 600px) {
    .img-gabi {
-      margin: 0 20px 10px 0;
+      max-width: 250px;
+      margin: 5px 20px 10px 0;
+    }
+    .col-sobre {
+      padding: 60px 80px 50px 70px;
     }
   }
 
-  @media(min-width:767px) {
-   .with-margin {
-      margin: 0 5px;
-    }
-
+  @media(min-width:768px) {
     .col-sobre {
       padding: 60px 100px 50px 90px;
     }
@@ -358,9 +363,13 @@ html {
   text-align: center;
 
   .livros-heading {
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
     color: $livrosHeadingColor;
-    padding-bottom: 50px;
+    background-color: $livrosHeadingBg;
+    display: inline-block;
+    padding: 3px 15px;
+    margin-bottom: 40px;
   }
 
   .livro-item {
@@ -411,13 +420,13 @@ html {
   }
 }
 
-
 .modal-livro .livro-titulo-modal {
   padding-bottom: 10px;
 }
 
 #vidaria {
-  padding-top: 70px;
+  margin-top: 25px;
+  padding-top: 50px;
   padding-bottom: 100px;
   background-color: $vidariaBg;
 
@@ -453,9 +462,13 @@ html {
   text-align: center;
 
   .imprensa-heading {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
-    padding-bottom: 20px;
+    padding: 3px 15px 7px;
+    margin-bottom: 20px;
     color: $imprensaHeadingColor;
+    background-color: $imprensaHeadingBg;
   }
 
   .imprensa-item {
@@ -539,22 +552,35 @@ ul.social-buttons {
 }
 ul.social-buttons li a {
   display: block;
-  background-color: $socialBtnBg;
   height: 40px;
   width: 40px;
   border-radius: 100%;
   font-size: 20px;
   line-height: 40px;
-  color: white;
+  color: $socialBtnColor;
   outline: none;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+
+  &.facebook {
+    background-color: #3b5998;
+  }
+
+  &.twitter {
+    background-color: #00acee;
+  }
+
+  &.linkedin {
+    background-color: #0e76a8;
+  }
 }
+
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-  background-color: $socialBtnHover;
+  background-color: $socialBtnColor;
+  color: $socialBtnHover;
 }
 
 .panel-custom {
@@ -581,23 +607,206 @@ ul.social-buttons li a:active {
   &:active,
   &.active {
     background-color: $btnActiveBg;
-    border-color: $btnBorder;
+    color: $btnColor;
   }
-
-  &.disabled:hover,
-  &.disabled:focus,
-  &.disabled:active,
-  &.disabled.active,
-  &[disabled]:hover,
-  &[disabled]:focus,
-  &[disabled]:active,
-  &[disabled].active,
-  fieldset[disabled] &:hover,
-  fieldset[disabled] &:focus,
-  fieldset[disabled] &:active,
-  fieldset[disabled] &.active {
-    background-color: $btnActiveBg;
-    border-color: $btnBorder;
-  }
-
 }
+
+// =====================
+// Social Ribbon
+
+.social-ribbon {
+  margin: auto;
+  padding-top: 50px;
+  display: inline-block;
+}
+.ribbon {
+  float: left;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  -o-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: none;
+  width: 80px;
+  height: 170px;
+  position: relative;
+  padding: 5px;
+  margin-right: -10px;
+  -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
+  -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
+  -ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
+  -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5)); 
+
+  &:hover {
+    margin-top: 20px;
+    color: white; 
+  }
+  & span {
+    line-height: 150px;
+    font-size: 3.5em;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid blue;
+    border-right: 50px solid transparent;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid blue;
+    border-left: 50px solid transparent;
+  }
+}
+
+.facebook {
+  z-index: 999;
+  background: #3b5998;
+  color: #1e2e4f; 
+
+  &::after {
+    border-top-color: #3b5998; 
+  }
+  &::before {
+    border-top-color: #3b5998; 
+  }
+}
+.linkedin {
+  background: #0e76a8;
+  margin-top: 10px;
+  color: #06344a; 
+
+  &::after {
+    border-top-color: #0e76a8; 
+  }
+  &::before {
+    border-top-color: #0e76a8; 
+  }
+}
+
+.twitter {
+  margin-top: 10px;
+  background: #00a0d1;
+  color: #00526b; 
+
+  &::after {
+    border-top-color: #00a0d1; 
+  }
+  &::before {
+    border-top-color: #00a0d1; 
+  } 
+}
+
+//=====================
+// Social hover
+
+// .mb_share {
+// }
+
+// .mb_share .button .native_button div {
+//   font-size:11px;
+//   color:rgb(124, 124, 124);
+// }
+
+// .mb_share .button {
+//   background:#DCE0E0;
+//   position:relative;
+//   float: left;
+//   margin:0 7px 14px;
+//   width:200px;
+//   height:40px; 
+//   overflow:hidden;
+//   -webkit-border-radius:3px;
+//   -moz-border-radius:3px;
+//   border-radius:3px;
+// }
+// .mb_share .button .icon {
+//   float:left;
+//   width:40px;
+//   height:40px;
+//   -webkit-border-radius:3px 0px 0px 3px;
+//   -moz-border-radius:3px 0px 0px 3px;
+//   border-radius:3px 0px 0px 3px;
+
+//   color: white;
+//   font-size: 2em;
+//   padding-top: 0px;
+// }
+// .mb_share .button .native_button {
+//   width:160px;
+//   height:40px;
+//   float:left;
+//   background:#DCE0E0 !important;
+//   display:table;
+// }
+// .mb_share .button .native_button > div {
+//   display:table-cell;
+//   vertical-align:middle;
+//   text-align:center;
+// }
+// .mb_share .button .slide {
+//   position:absolute;
+//   right:0;
+//   top:0;
+//   z-index:100;
+//   float:left;
+//   width:160px;
+//   height:40px;
+//   transition:.2s transform linear;
+//   -webkit-transition:.2s -webkit-transform linear;
+//   -moz-transition:.2s -moz-transform linear;
+
+//   line-height: 16px;
+// }
+// .mb_share .button .slide span {
+//   color:#fff;
+//   display:block;
+//   cursor:default;
+//   width:100%;
+//   text-align:center;
+//   margin:10px 0;
+//   padding:2px 0;
+//   font-size:16px;
+//   border-left:1px solid rgba(255,255,255,0.35);
+// }
+// /* Transitions */
+// .mb_share .button.slide_x:hover .slide {
+//   -webkit-transform:translateX(160px);
+//   -moz-transform:translateX(160px);
+//   transform:translateX(160px);
+// }
+
+// /* FACEBOOK */
+// .mb_share .button.facebook .icon {
+//   background-position:-50px 0;
+// }
+// .mb_share .button.facebook > div {
+//   background-color:#305c99;
+// }
+// /* TWITTER */
+// .mb_share .button.twitter .icon {
+//   background-position:0 0;
+// }
+// .mb_share .button.twitter > div {
+//   background-color:#00cdff;
+// }
+// /* LINKEDIN */
+// .mb_share .button.linkedin .icon {
+//   background-position:-50px -50px;
+// }
+// .mb_share .button.linkedin > div {
+//   background-color:#007bb6;
+// }
