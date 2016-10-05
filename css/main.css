@@ -25,6 +25,11 @@ html {
       background-color: white; }
   .navbar-default .navbar-collapse {
     border-color: white; }
+  .navbar-default .bookmark {
+    display: inline-block;
+    width: 18px;
+    position: relative;
+    left: 4px; }
   .navbar-default .navbar-brand {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -42,10 +47,14 @@ html {
   .navbar-default.affix .navbar-brand {
     visibility: visible;
     color: white; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .navbar-default .navbar-brand {
+      padding-left: 0px; }
+    .navbar-default .navbar-nav > li > a {
+      padding-left: 11px;
+      padding-right: 10px; } }
   .navbar-default .navbar-nav > li > a {
-    color: white;
-    padding-left: 13px;
-    padding-right: 13px; }
+    color: white; }
     .navbar-default .navbar-nav > li > a:focus {
       color: white; }
     .navbar-default .navbar-nav > li > a:hover {
@@ -64,7 +73,7 @@ html {
   #intro .bookmark {
     max-width: 78px;
     position: relative;
-    top: -32px;
+    top: 3px;
     left: 10px; }
   #intro .intro-title {
     font-family: 'Playfair Display', serif;
@@ -139,7 +148,7 @@ html {
       padding: 0; } }
   @media (min-width: 992px) {
     #servicos .text-servico {
-      padding: 0 20px; } }
+      padding: 0 9px; } }
   #servicos .servico-btn {
     margin-top: 15px;
     margin-bottom: 50px; }
@@ -162,8 +171,6 @@ html {
     font-weight: 700; }
   #sobre .sobre-text {
     text-align: justify;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
     font-size: 1.1em;
     padding-bottom: 10px; }
   #sobre .dropcap {
@@ -222,6 +229,8 @@ html {
     max-width: 250px;
     margin: 0 auto;
     outline: none; }
+  #livros .livro-item .livro-link.livro-oma {
+    margin-top: 61px; }
   #livros .livro-item .livro-link .livro-hover {
     background-color: rgba(255, 91, 100, 0.9);
     position: absolute;
@@ -393,82 +402,3 @@ ul.social-buttons li a:active {
   .btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active {
     background-color: #E53B3B;
     color: white; }
-
-.social-ribbon {
-  margin: auto;
-  padding-top: 50px;
-  display: inline-block; }
-
-.ribbon {
-  float: left;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  -ms-border-radius: 5px 5px 0px 0px;
-  -o-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border: none;
-  width: 80px;
-  height: 170px;
-  position: relative;
-  padding: 5px;
-  margin-right: -10px;
-  -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
-  -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
-  -ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
-  -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.5)); }
-  .ribbon:hover {
-    margin-top: 20px;
-    color: white; }
-  .ribbon span {
-    line-height: 150px;
-    font-size: 3.5em; }
-  .ribbon::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-top: 30px solid blue;
-    border-right: 50px solid transparent; }
-  .ribbon::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 30px solid blue;
-    border-left: 50px solid transparent; }
-
-.facebook {
-  z-index: 999;
-  background: #3b5998;
-  color: #1e2e4f; }
-  .facebook::after {
-    border-top-color: #3b5998; }
-  .facebook::before {
-    border-top-color: #3b5998; }
-
-.linkedin {
-  background: #0e76a8;
-  margin-top: 10px;
-  color: #06344a; }
-  .linkedin::after {
-    border-top-color: #0e76a8; }
-  .linkedin::before {
-    border-top-color: #0e76a8; }
-
-.twitter {
-  margin-top: 10px;
-  background: #00a0d1;
-  color: #00526b; }
-  .twitter::after {
-    border-top-color: #00a0d1; }
-  .twitter::before {
-    border-top-color: #00a0d1; }
