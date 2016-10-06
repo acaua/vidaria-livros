@@ -21,6 +21,12 @@ $(document).ready(function() {
   });
 
   // Assigning Ajax post of contact form instead of normal submit behavior
+
+  $("#contact-forma").on("submit", function(e) {
+    e.preventDefault();
+    $('#alert-message').html("abobrinha");
+  });
+
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
     var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ=='; // acaua.faria2@gmail.com
@@ -37,13 +43,13 @@ $(document).ready(function() {
         $("#form-submit-button").prop("disabled",true).html("Enviando...");
       },
       success:function(data) {
-        $("#form-block").hide();
-        $("#form-error").hide();
-        $("#form-success").show();
+        $("#form-submit-button").prop("disabled",false).html("Enviar");
+        $('#contact-form')[0].reset();
+        $('#alert-message').html('<div class="alert alert-success fade in alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Mensagem enviada!</strong> Obrigada pelo contato');
       },
       error: function(err) {
         $("#form-submit-button").prop("disabled",false).html("Enviar");
-        $("#form-error").show();
+        $('#alert-message').html('<div class="alert alert-danger fade in alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Erro!</strong> Ocorreu um erro, tente novamente.');
       }
     });
   });

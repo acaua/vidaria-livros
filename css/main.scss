@@ -84,17 +84,27 @@ html {
     border-color: $menuColor;
   }
 
-  .bookmark {
+  .menu-logo {
     display: inline-block;
     width: 18px;
     position: relative;
     left: 4px;
+    path {
+      fill: transparent;
+      webkit-transition: fill 0.5s ease-in-out;
+      -moz-transition: fill 0.5s ease-in-out;
+      transition: fill 0.5s ease-in-out;
+    }
+  }
+
+  &.affix .menu-logo path {
+    fill: white;
   }
 
   .navbar-brand {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
     font-family: 'Playfair Display', serif;
     font-size: 1.8em;
     font-weight: 700;
@@ -116,12 +126,10 @@ html {
     .navbar-brand {
       padding-left: 0px;
     }
-
     .navbar-nav > li > a {
       padding-left: 11px;
       padding-right: 10px;
     }
-
   }
 
   .navbar-nav {
@@ -147,24 +155,29 @@ html {
 }
 
 #intro {
+  min-height: 100%;
   padding-top: 130px;
+  padding-top: 14vmax;
   padding-bottom: 100px;
   margin-bottom: 50px;
   text-align: center;
   background-color: $sectionBg;
 
-  .bookmark {
-    max-width: 78px;
+  .intro-banner {
+    margin-left: -2.3%;
+  }
+
+  .intro-logo {
     position: relative;
-    top: 3px;
-    left: 10px;
+    top: 0.5vw;
+    left: 0.7%;
+    max-width: 9.1vw;
   }
 
   .intro-title {
     font-family: 'Playfair Display', serif;
-    font-size: 5em;
+    font-size: 12vw;
     font-weight: 700;
-    margin: 0;
     display: inline;
   }
 
@@ -175,6 +188,7 @@ html {
     list-style-type: none;
     font-weight: bold;
     display: inline-block;
+    margin-top: 20px;
   }
 
   .intro-servicos li {
@@ -183,14 +197,18 @@ html {
   }
 
   @media(min-width:768px) {
-    .intro-title {
-      font-size: 7.5em;
+    .intro-logo {
+      top: 0.3vw;
+      left: 0.7%;
+      max-width: 6.8vw;
     }
-
+    .intro-title {
+      font-size: 9vw;
+    }
     .intro-servicos {
+      margin-top: 0px;
       margin-bottom: 15px;
     }
-
     .intro-servicos li {
       display: inline-block;
       padding: 0 11px;
@@ -199,6 +217,9 @@ html {
   }
 
   @media(min-width:992px) {
+    padding-top: 10vmax;
+
+
     .intro-servicos li {
       padding: 0 30px;
       font-size: 1.1em;
@@ -210,7 +231,6 @@ html {
     font-size: 1.25em;
     font-family: 'Droid Sans', sans-serif;
   }
-
   .intro-poema {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -224,14 +244,12 @@ html {
     color: $poemaColor;
     background-color: $poemaBg;
     padding: 0 10px;
-  }
-
-  mark.first {
-    padding-left: 15px;
-  }
-
-  mark.last {
-    padding-right: 15px;
+    &.first {
+      padding-left: 15px;
+    }
+    &.last {
+      padding-right: 15px;
+    }
   }
 }
 
@@ -564,6 +582,17 @@ footer {
 
   span.author {
     line-height: 40px;
+  }
+
+  .social-column {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @media (min-width: 768px) and (max-width: 900px) {
+    .middle-name {
+      display: none;
+    }
   }
 }
 

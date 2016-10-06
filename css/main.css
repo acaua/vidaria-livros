@@ -25,15 +25,22 @@ html {
       background-color: white; }
   .navbar-default .navbar-collapse {
     border-color: white; }
-  .navbar-default .bookmark {
+  .navbar-default .menu-logo {
     display: inline-block;
     width: 18px;
     position: relative;
     left: 4px; }
+    .navbar-default .menu-logo path {
+      fill: transparent;
+      webkit-transition: fill 0.5s ease-in-out;
+      -moz-transition: fill 0.5s ease-in-out;
+      transition: fill 0.5s ease-in-out; }
+  .navbar-default.affix .menu-logo path {
+    fill: white; }
   .navbar-default .navbar-brand {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, visibility 0.5s ease-in-out;
     font-family: 'Playfair Display', serif;
     font-size: 1.8em;
     font-weight: 700;
@@ -65,21 +72,24 @@ html {
     background-color: #ff8e8e; }
 
 #intro {
+  min-height: 100%;
   padding-top: 130px;
+  padding-top: 14vmax;
   padding-bottom: 100px;
   margin-bottom: 50px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7); }
-  #intro .bookmark {
-    max-width: 78px;
+  #intro .intro-banner {
+    margin-left: -2.3%; }
+  #intro .intro-logo {
     position: relative;
-    top: 3px;
-    left: 10px; }
+    top: 0.5vw;
+    left: 0.7%;
+    max-width: 9.1vw; }
   #intro .intro-title {
     font-family: 'Playfair Display', serif;
-    font-size: 5em;
+    font-size: 12vw;
     font-weight: 700;
-    margin: 0;
     display: inline; }
   #intro .intro-servicos {
     padding: 8px 15px;
@@ -87,23 +97,31 @@ html {
     color: #FF4242;
     list-style-type: none;
     font-weight: bold;
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 20px; }
   #intro .intro-servicos li {
     padding: 2px 5px;
     font-size: 1.1em; }
   @media (min-width: 768px) {
+    #intro .intro-logo {
+      top: 0.3vw;
+      left: 0.7%;
+      max-width: 6.8vw; }
     #intro .intro-title {
-      font-size: 7.5em; }
+      font-size: 9vw; }
     #intro .intro-servicos {
+      margin-top: 0px;
       margin-bottom: 15px; }
     #intro .intro-servicos li {
       display: inline-block;
       padding: 0 11px;
       font-size: 1.05em; } }
   @media (min-width: 992px) {
-    #intro .intro-servicos li {
-      padding: 0 30px;
-      font-size: 1.1em; } }
+    #intro {
+      padding-top: 10vmax; }
+      #intro .intro-servicos li {
+        padding: 0 30px;
+        font-size: 1.1em; } }
   #intro .intro-texto {
     padding-top: 10px;
     font-size: 1.25em;
@@ -119,10 +137,10 @@ html {
     color: white;
     background-color: rgba(255, 91, 100, 0.9);
     padding: 0 10px; }
-  #intro mark.first {
-    padding-left: 15px; }
-  #intro mark.last {
-    padding-right: 15px; }
+    #intro mark.first {
+      padding-left: 15px; }
+    #intro mark.last {
+      padding-right: 15px; }
 
 #servicos {
   padding-top: 40px; }
@@ -357,6 +375,12 @@ footer {
     text-decoration: none; }
   footer span.author {
     line-height: 40px; }
+  footer .social-column {
+    padding-left: 0px;
+    padding-right: 0px; }
+  @media (min-width: 768px) and (max-width: 900px) {
+    footer .middle-name {
+      display: none; } }
 
 ul.social-buttons {
   margin-bottom: 0; }

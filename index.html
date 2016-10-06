@@ -44,7 +44,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand page-scroll" href="#page-top">
-          <span class="bookmark"><svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.4 296.4" ><path d="M227.3 0H69.8c-7.7 0-13.6 4.9-13.6 12.6v269.8c0 5 2.5 9.7 6.9 12.2s9.6 2.4 13.9-0.2l71.5-49.4 71.5 49.4c4.3 2.6 9.2 2.7 13.6 0.2 4.4-2.5 6.6-7.1 6.6-12.2V12.6C240.2 4.9 235 0 227.3 0zM148.6 119.1c-9.8 0-35.5-18.3-35.5-36 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7C184 100.8 158.3 119.1 148.6 119.1z" fill="white"/></svg>
+          <span class="menu-logo"><svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.4 296.4" ><path d="M227.3 0H69.8c-7.7 0-13.6 4.9-13.6 12.6v269.8c0 5 2.5 9.7 6.9 12.2s9.6 2.4 13.9-0.2l71.5-49.4 71.5 49.4c4.3 2.6 9.2 2.7 13.6 0.2 4.4-2.5 6.6-7.1 6.6-12.2V12.6C240.2 4.9 235 0 227.3 0zM148.6 119.1c-9.8 0-35.5-18.3-35.5-36 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7C184 100.8 158.3 119.1 148.6 119.1z" fill="white"/></svg>
           </span>
           Vidaria Livros
         </a>
@@ -86,8 +86,10 @@
   <!-- Intro Section -->
   <section id="intro" class="intro-section">
     <div class="container-fluid">
-      <svg class="bookmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.4 296.4" ><path d="M227.3 0H69.8c-7.7 0-13.6 4.9-13.6 12.6v269.8c0 5 2.5 9.7 6.9 12.2s9.6 2.4 13.9-0.2l71.5-49.4 71.5 49.4c4.3 2.6 9.2 2.7 13.6 0.2 4.4-2.5 6.6-7.1 6.6-12.2V12.6C240.2 4.9 235 0 227.3 0zM148.6 119.1c-9.8 0-35.5-18.3-35.5-36 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7C184 100.8 158.3 119.1 148.6 119.1z" fill="#ff4242"/></svg>
-      <h1 class="intro-title">Vidaria Livros</h1>
+      <div class="intro-banner">
+        <svg class="intro-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.4 296.4" ><path d="M227.3 0H69.8c-7.7 0-13.6 4.9-13.6 12.6v269.8c0 5 2.5 9.7 6.9 12.2s9.6 2.4 13.9-0.2l71.5-49.4 71.5 49.4c4.3 2.6 9.2 2.7 13.6 0.2 4.4-2.5 6.6-7.1 6.6-12.2V12.6C240.2 4.9 235 0 227.3 0zM148.6 119.1c-9.8 0-35.5-18.3-35.5-36 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7 0-9.8 7.9-17.7 17.7-17.7 9.8 0 17.7 7.9 17.7 17.7C184 100.8 158.3 119.1 148.6 119.1z" fill="#ff4242"/></svg>
+        <h1 class="intro-title">Vidaria Livros</h1>
+      </div>
       <div>
         <ul class="intro-servicos">
           <li>escrita de livros</li>
@@ -411,7 +413,7 @@
   <section id="contato" class="contato-section">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
           <div class="panel panel-custom">
             <div class="panel-heading">
               <span class="panel-title">Contato</span>
@@ -446,13 +448,7 @@
               </form>
             </div>
           </div>
-        </div>
-        <div id="form-success" class="col-sm-6 col-sm-offset-3 text-left" style="display:none">
-          <h1>Obrigado pelo contato</h1>
-        </div>
-        <div id="form-error" class="col-sm-6 col-sm-offset-3 text-left" style="display:none">
-          <h1>Ocorreu um erro, tente novamente</h1>
-        </div>
+          <div id="alert-message"></div>
       </div>
     </div>
   </section>
@@ -466,7 +462,7 @@
             créditos
           </a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 social-column">
           <ul class="list-inline social-buttons">
             <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -475,7 +471,7 @@
         </div>
         <div class="col-sm-4">
           <span class="author">
-            Feito com <i class="fa fa-heart"></i> e <i class="fa fa-coffee"></i> por <a href="https://linkedin.com/in/acauafaria">Acauã Faria</a></span>
+            Feito com <i class="fa fa-heart"></i> e <i class="fa fa-coffee"></i> por <a href="https://linkedin.com/in/acauafaria">Acauã <span class="middle-name"> Sperl de </span>Faria</a></span>
           </div>
         </div>
       </div>
