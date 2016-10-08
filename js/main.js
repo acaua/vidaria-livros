@@ -29,8 +29,7 @@ $(document).ready(function() {
 
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ=='; // acaua.faria2@gmail.com
-    // var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t' // blogvidaria@gmail.com
+    var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t'
     var base_url = '//formspree.io/';
     var url = base_url + atob(base64_email);
     var message = $("#contact-form").serialize();
