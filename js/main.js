@@ -23,8 +23,7 @@ $(document).ready(function() {
   // Assigning Ajax post of contact form instead of normal submit behavior
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-    //var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t'; blogvidaria@gmail.com
-    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
+    var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t';
     var base_url = '//formspree.io/';
     var url = base_url + atob(base64_email);
     var message = $("#contact-form").serializeArray();
