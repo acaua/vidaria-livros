@@ -21,18 +21,16 @@ $(document).ready(function() {
   });
 
   // Assigning Ajax post of contact form instead of normal submit behavior
-
-  $("#contact-forma").on("submit", function(e) {
-    e.preventDefault();
-    $('#alert-message').html("abobrinha");
-  });
-
   $("#contact-form").on("submit", function(e) {
     e.preventDefault();
-    var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t'
+    //var base64_email = 'YmxvZ3ZpZGFyaWFAZ21haWwuY29t'; blogvidaria@gmail.com
+    var base64_email = 'YWNhdWEuZmFyaWEyQGdtYWlsLmNvbQ==';
     var base_url = '//formspree.io/';
     var url = base_url + atob(base64_email);
-    var message = $("#contact-form").serialize();
+    var message = $("#contact-form").serializeArray();
+    message.push({name: "_subject", value: 'Vidaria Livros - contato: ' + message[0]['value']});
+    console.log(message);
+    
     $.ajax({
       url: url,
       method: "POST",
@@ -51,6 +49,7 @@ $(document).ready(function() {
         $('#alert-message').html('<div class="alert alert-danger fade in alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Erro!</strong> Ocorreu um erro, tente novamente.');
       }
     });
+    
   });
 
 
