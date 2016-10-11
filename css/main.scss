@@ -594,42 +594,97 @@ footer {
       display: none;
     }
   }
-}
 
-ul.social-buttons {
-  margin-bottom: 0;
-}
-ul.social-buttons li a {
-  display: block;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  font-size: 20px;
-  line-height: 40px;
-  color: $socialBtnColor;
-  outline: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  ul.social-buttons {
+    margin-bottom: 0;
+  }
+  ul.social-buttons li a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: $socialBtnColor;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 
-  &.facebook {
-    background-color: #3b5998;
+    &.facebook {
+      background-color: #3b5998;
+    }
+
+    &.twitter {
+      background-color: #00acee;
+    }
+
+    &.linkedin {
+      background-color: #0e76a8;
+    }
   }
 
-  &.twitter {
-    background-color: #00acee;
-  }
-
-  &.linkedin {
-    background-color: #0e76a8;
+  ul.social-buttons li a:hover,
+  ul.social-buttons li a:focus,
+  ul.social-buttons li a:active {
+    background-color: $socialBtnColor;
+    color: $socialBtnHover;
   }
 }
 
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
-  background-color: $socialBtnColor;
-  color: $socialBtnHover;
+#acaua-modal {
+  text-align: center;
+
+  @media(max-width: 400px) {
+    h2 {
+      font-size: 7.5vw;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $menuBg;
+    }
+  }
+
+  ul {
+    display: inline-block;
+
+    li {
+      text-align: left;
+      padding: 3px 0;
+
+      i {
+        padding-right: 5px;
+        position: relative;
+        top: 2px;
+        width: 40px;
+        text-align: center;
+
+
+        &.fa-linkedin {
+          color: #0e76a8;
+        }
+        &.fa-github {
+          color: #333;
+        }
+        &.fa-envelope {
+          color: $menuBg;
+        }
+        &.fa-whatsapp {
+          color: #43d854;
+        }
+      }
+    }
+  }
+
+  .abobrinha {
+    text-align: left;
+  }
 }
 
 .panel-custom {

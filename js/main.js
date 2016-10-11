@@ -6,6 +6,9 @@ $(document).ready(function() {
     }
   });
 
+  $('#obfuscated1').attr("href", atob("bWFpbHRvOmFjYXVhLmZhcmlhQGdtYWlsLmNvbQ=="));
+  $('#obfuscated2').html(atob("JiMwOTc7JiMwOTk7JiMwOTc7JiMxMTc7JiMwOTc7JiMwNDY7JiMxMDI7JiMwOTc7JiMxMTQ7JiMxMDU7JiMwOTc7JiMwNjQ7JiMxMDM7JiMxMDk7JiMwOTc7JiMxMDU7JiMxMDg7JiMwNDY7JiMwOTk7JiMxMTE7JiMxMDk7"));
+
   // Closes the Responsive Menu on Menu Item Click
   $('.navbar-collapse ul li a, .navbar-brand.page-scroll').click(function(){
     $('.navbar-collapse').collapse('hide');

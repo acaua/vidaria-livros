@@ -381,34 +381,62 @@ footer {
   @media (min-width: 768px) and (max-width: 900px) {
     footer .middle-name {
       display: none; } }
+  footer ul.social-buttons {
+    margin-bottom: 0; }
+  footer ul.social-buttons li a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+    footer ul.social-buttons li a.facebook {
+      background-color: #3b5998; }
+    footer ul.social-buttons li a.twitter {
+      background-color: #00acee; }
+    footer ul.social-buttons li a.linkedin {
+      background-color: #0e76a8; }
+  footer ul.social-buttons li a:hover,
+  footer ul.social-buttons li a:focus,
+  footer ul.social-buttons li a:active {
+    background-color: white;
+    color: #FF4242; }
 
-ul.social-buttons {
-  margin-bottom: 0; }
-
-ul.social-buttons li a {
-  display: block;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  font-size: 20px;
-  line-height: 40px;
-  color: white;
-  outline: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s; }
-  ul.social-buttons li a.facebook {
-    background-color: #3b5998; }
-  ul.social-buttons li a.twitter {
-    background-color: #00acee; }
-  ul.social-buttons li a.linkedin {
-    background-color: #0e76a8; }
-
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
-  background-color: white;
-  color: #FF4242; }
+#acaua-modal {
+  text-align: center; }
+  @media (max-width: 400px) {
+    #acaua-modal h2 {
+      font-size: 7.5vw; } }
+  #acaua-modal a {
+    text-decoration: none; }
+    #acaua-modal a:hover, #acaua-modal a:focus, #acaua-modal a:active {
+      color: #FF4242; }
+  #acaua-modal ul {
+    display: inline-block; }
+    #acaua-modal ul li {
+      text-align: left;
+      padding: 3px 0; }
+      #acaua-modal ul li i {
+        padding-right: 5px;
+        position: relative;
+        top: 2px;
+        width: 40px;
+        text-align: center; }
+        #acaua-modal ul li i.fa-linkedin {
+          color: #0e76a8; }
+        #acaua-modal ul li i.fa-github {
+          color: #333; }
+        #acaua-modal ul li i.fa-envelope {
+          color: #FF4242; }
+        #acaua-modal ul li i.fa-whatsapp {
+          color: #43d854; }
+  #acaua-modal .abobrinha {
+    text-align: left; }
 
 .panel-custom {
   border-color: #FF4242; }
