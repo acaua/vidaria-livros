@@ -60,4 +60,10 @@ $(document).ready(function() {
     $(this).find("iframe").attr('src', '');
     $(this).find("iframe").attr('src', url);
   });
+
+
+  // Track click on acaua-link for Analytics
+  $('#acaua-link').on('click', function() {
+    ga('send', 'event', 'link', 'click', 'acaua-link');
+  });
 });
