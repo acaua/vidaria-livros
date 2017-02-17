@@ -416,10 +416,6 @@ html {
     outline: none;
   }
 
-  .livro-item .livro-link.livro-oma {
-    margin-top: 61px;
-  }
-
   .livro-item .livro-link .livro-hover {
     background-color: $livroHoverBg;
     position: absolute;
@@ -460,6 +456,22 @@ html {
 
 .modal-livro .livro-titulo-modal {
   padding-bottom: 10px;
+}
+
+#depoimentos {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  .depoimentos-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: $livrosHeadingColor;
+    background-color: $livrosHeadingBg;
+    display: inline-block;
+    padding: 3px 15px;
+    margin-bottom: 40px;
+  }
 }
 
 #vidaria {
